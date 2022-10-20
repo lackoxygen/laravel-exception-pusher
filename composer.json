@@ -1,0 +1,45 @@
+{
+    "name": "lackoxygen/exception-push",
+    "type": "library",
+    "description": "异常推送",
+    "keywords": ["ding", "exception", "wx"],
+    "homepage": "https://github.com/lackoxygen/laravel-exception-pusher",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lackoxygen\\ExceptionPush\\": "src/"
+        },
+        "files": [
+            "src/Helper.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "ojz",
+            "email": "jingzeou@outlook.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "Lackoxygen\\ExceptionPush\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "illuminate/queue":"^8.0",
+        "illuminate/support": "^8.0",
+        "illuminate/bus": "^8.0",
+        "monolog/monolog": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10",
+        "friendsofphp/php-cs-fixer": "^3.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lackoxygen\\ExceptionPush\\ExceptionPushProvider"
+            ]
+        }
+    }
+}
